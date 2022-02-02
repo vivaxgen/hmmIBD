@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
   const double min_discord = 0.0;  // minimum discordance in comparison; set > 0 to skip identical pairs
   const double max_discord = 1.0;  // set < 1 to skip unrelated pairs
   const int nchrom = 14;           // 14 for falciparum
-  const int min_snp_sep = 5;       // skip next snp(s) if too close to last one; in bp
+  const int min_snp_sep = 0;       // skip next snp(s) if too close to last one; in bp
   const double rec_rate = 7.4e-7; // 7.4e-5 cM/bp or 13.5 kb/cM Miles et al, Genome Res 26:1288-1299 (2016)
   //  const double rec_rate = 5.8e-7;   // 5.8e-5 cM/bp, or 17kb/cM
   const double fit_thresh_dpi = .001;
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
   /* end user-settable parameters */
   double k_rec_init = 1.0;          // starting value for N generation parameter
   double k_rec, k_rec_max = 0.;  // working and max value for same
-  const int max_all = 8;
+  const int max_all = 100;
   int niter = 5;    // maximum number of iterations of fit; can be overriden by -m
   int max_snp = 30000;
   char data_file1[128], data_file2[128], *erp;
