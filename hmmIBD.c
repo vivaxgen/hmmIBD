@@ -19,7 +19,7 @@
 int main(int argc, char **argv) {
   /* User-settable parameters */
   const double eps = .001;         // error rate in genotype calls
-  const int min_inform = 10;       // minimum number of informative sites in a pairwise 
+  const int min_inform = 0;       // minimum number of informative sites in a pairwise 
                                    //  comparison (those w/ minor allele)
   const double min_discord = 0.0;  // minimum discordance in comparison; set > 0 to skip identical pairs
   const double max_discord = 1.0;  // set < 1 to skip unrelated pairs
